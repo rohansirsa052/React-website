@@ -1,26 +1,29 @@
-import React from 'react'
-import HomeSection from './componants/HomeSection'
+import React from 'react';
+import HomeSection from './componants/HomeSection';
 import styled from "styled-components";
 import Contact from './Contact';
-import Services from './Services'
+import Services from './Services';
+
 const Home = () => {
   return (
     <React.Fragment>
-    <Wrapper className='homesection'>
-      <HomeSection/>
-    </Wrapper>
-    <Services/>
-    <Contact/>
-   
+      <HomeSectionWrapper>
+        <HomeSection />
+      </HomeSectionWrapper>
+      <Services />
+     
+        <Contact />
+  
     </React.Fragment>
-  )
-}
-const Wrapper = styled.section`
-&::before {
+  );
+};
+
+const HomeSectionWrapper = styled.section`
+  &::before {
     content: "";
-    background: url("images/bg2.png") no-repeat center center/cover;
-    top: 0px;
-    left: 0px;
+    background: url("https://wallpapercave.com/wp/wp12683639.jpg") no-repeat center center/cover;
+    top: 0;
+    left: 0;
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -29,4 +32,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Home
+export default Home;

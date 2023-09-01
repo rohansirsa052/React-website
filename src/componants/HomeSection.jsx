@@ -48,9 +48,10 @@ const Wrapper = styled.section`
 
   .hero-top-data {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 1.5rem;
-    color: ${({ theme }) => theme.colors.helper};
+    color: #060706;
+    
   }
 
   .hero-heading {
@@ -62,6 +63,8 @@ const Wrapper = styled.section`
     margin-top: 1.5rem;
     margin-bottom: 3.4rem;
     max-width: 60rem;
+    font-weight: 700;
+    color: #dae4e0;
   }
 
   .section-hero-image {

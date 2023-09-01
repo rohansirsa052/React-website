@@ -38,22 +38,38 @@ body::-webkit-scrollbar-thumb {
 
 
 h1{
-  color:${({ theme }) => theme.colors.heading};
   font-size: 6rem;
+  animation: move-bg 16s linear infinite;
+  --bg-size: 400%;
+  --color-one: #060706;
+  --color-two: #dae4e0;
   font-weight: 900;
+  background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 h2 {
-   color: ${({ theme }) => theme.colors.heading};
-   font-size: 4.4rem;
-   font-weight: 300;
-   white-space: normal;
-   text-align: center;
-  }
+  color: ${({ theme }) => theme.colors.heading};
+  font-size: 4.4rem;
+  font-weight: 300;
+  white-space: normal;
+  text-align: center;
+ }
 
-  h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
+ h3 {
+ font-size: 1.8rem;
+ font-weight: 400;
 }
 
 p {

@@ -44,13 +44,14 @@ const Wrapper = styled.section`
 
   .btn {
     max-width: 16rem;
+    background: linear-gradient(red, black);
   }
 
   .hero-top-data {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1.5rem;
-    color: #060706;
+    color: white;
     
   }
 

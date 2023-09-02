@@ -16,7 +16,7 @@ const Footer = () => {
 
           <div className="contact-short-btn">
             <NavLink to="/">
-              <Button>Get Started</Button>
+              <Button className="btn" >Get Started</Button>
             </NavLink>
           </div>
         </div>
@@ -50,6 +50,7 @@ const Footer = () => {
               </div>
               <div>
                 <a
+                rel="noreferrer"
                   href="google.com"
                   target="_blank">
                   <FaYoutube className="icons" />
@@ -98,7 +99,22 @@ const Wrapper = styled.section`
     justify-self: end;
     align-self: center;
   }
+  .btn {
+    margin: 2rem auto;
+    background-color: rgb(0 0 0 / 0%);
+    border: 0.1rem solid rgb(98 84 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(98 84 243);
+    font-size: 1.4rem;
 
+    &:hover {
+      background-color: rgb(98 84 243);
+      color: #fff;
+    }
+  }
+}
   footer {
     padding: 14rem 0 9rem 0;
     background-color: ${({ theme }) => theme.colors.footer_bg};

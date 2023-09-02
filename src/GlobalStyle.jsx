@@ -43,6 +43,7 @@ h1{
   --bg-size: 400%;
   --color-one: #060706;
   --color-two: #dae4e0;
+  
   font-weight: 900;
   background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
   color: transparent;
@@ -137,6 +138,7 @@ li {
     text-transform: uppercase;
     font-size: 1.8rem;
     cursor: pointer;
+    
     }
 
 

@@ -28,7 +28,7 @@ const HomeSectionWrapper = styled.section`
     height: 100vh;
     width: 100vw;
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;
 

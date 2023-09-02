@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navvar";
 import styled from "styled-components";
-const Header = () => {
+const Header = () => { 
   return (
     <React.Fragment>
     <MainHeader>

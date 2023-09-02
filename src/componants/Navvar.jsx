@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import { CgMenu, CgCloseR } from "react-icons/cg";
 
 const Navbar = () => {
-   
+  
     const Nav = styled.nav`
     .navbar-list {
       display: flex;

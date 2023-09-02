@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Contact from './Contact';
 import Services from './Services';
 
-const Home = () => {
+const Home = () => {  
   return (
     <React.Fragment>
       <HomeSectionWrapper>
@@ -13,7 +13,7 @@ const Home = () => {
       <Services />
      
         <Contact />
-  
+        
     </React.Fragment>
   );
 };

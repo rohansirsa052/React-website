@@ -21,7 +21,7 @@ const Services = () => {
               <div className="card-data">
                 <h3 style= {{textAlign: "center"}}>{tittle}</h3>
                 <p>{description}</p>
-                <a href={Link} target="_blank">
+                <a rel="noreferrer" href={Link} target="_blank">
                 <Button className="btn">Read More</Button>
         </a>      
               

@@ -49,7 +49,7 @@ const Footer = () => {
                 <FaInstagram className="icons" />
               </div>
               <div>
-                <a
+                <a rel="noreferrer"
                   href="google.com"
                   target="_blank">
                   <FaYoutube className="icons" />

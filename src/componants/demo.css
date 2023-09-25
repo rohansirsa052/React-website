@@ -1,0 +1,11 @@
+.c{
+    height: 30vh;
+    width: 80vw;
+    background: red;
+    padding-top: 2rem;
+   flex-direction: column;
+ font-family: 'Courier New', Courier, monospace;
+
+ background-color: rgb(227, 227, 227);
+ 
+}

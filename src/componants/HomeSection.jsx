@@ -1,51 +1,69 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, {useEffect} from "react";
 import styled from "styled-components";
-import { Button } from "../styls/Button";
+import Header from "./Header";
+import Typed from 'typed.js';
 
 // import { useGlobalContext } from "../context";
 
-const HeroSection = () => {
+const HomeSection = (props) => {
 //   const { name, image } = useGlobalContext();
+const el = React.useRef(null);
+useEffect(() => {
+  const typed = new Typed(el.current, {
+    strings: ['Domain Expertise.', 'Engineering Excellence', 'Digital Evoluation'],
+    typeSpeed: 200,
+     onComplete: function () {
+        // Restart the animation when it finishes
+        typed.reset();
+      }
+    
+  });
+  return () => {
+    // Destroy Typed instance during cleanup to stop animation
+    typed.destroy();
+  };
+}, []);
 
-  return (
-    <Wrapper>
-      <div className="container grid grid-two-column">
+
+  return (    
+    <React.Fragment>
+    <Header/>
+    <Wrapper>   
+      <div className="container">
         <div className="section-hero-data">
-          <p className="hero-top-data">Who we are</p>
-          <h1 className="hero-heading">FINTECH</h1>
+          <p className="hero-top-data">{props.topData}</p>
+          <h1 className="hero-heading">Think <span className="spantext" ref={el} /> </h1>
           <p className="hero-para">
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae itaque consectetur ab minima,
-            modi consequatur odio tenetur quisquam saepe nihil.
-
+          {props.para}
           </p>
-          <Button className="btn hireme-btn">
-            <NavLink to="/contact"> hire me </NavLink>
-          </Button>
+         
         </div>
 
         {/* for image  */}
         <div className="section-hero-image">
-         
         </div>
       </div>
     </Wrapper>
+    </React.Fragment>
   );
 };
 
 const Wrapper = styled.section`
-  padding: 9rem 0;
+  padding: 12rem 0;
 
   .section-hero-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
-  .btn {
-    max-width: 16rem;
-    background: linear-gradient(red, black);
+  .container{
+    position: relative;
+    top: 15rem;
   }
+
+ .spantext{
+  color: white;
+ }
 
   .hero-top-data {
     text-transform: uppercase;
@@ -57,7 +75,11 @@ const Wrapper = styled.section`
 
   .hero-heading {
     text-transform: uppercase;
-    font-size: 6.4rem;
+    font-size: 5.9rem;
+  }
+  .header-is-scroll{
+    background: white !important;
+  color: black; 
   }
 
   .hero-para {
@@ -89,4 +111,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default HeroSection;
+export default HomeSection;

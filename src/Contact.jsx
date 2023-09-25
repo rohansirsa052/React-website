@@ -1,170 +1,148 @@
-
 import React from "react";
 import styled from "styled-components";
-
-
-const Wrapper = styled.section`
-  padding: 0 0 5rem 0;
-  // .map {
-  //   margin-top: 2rem;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
- 
-  
-`;
-
-const Container = styled.div`
-  width: 100%;
-  background: #fff;
-  padding: 25px 40px 10px 40px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
-  /* Background image properties */
-  background-image: url("https://wallpapercave.com/dwp2x/wp4863905.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.9;
- 
-`;
-
-
-const Text = styled.div`
-  text-align: center;
-  font-size: 41px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  background: -webkit-linear-gradient(right, #000000, #9913d9, #0ad4e6, #9900e2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-const Form = styled.form`
-  padding: 30px 0 0 0;
-`;
-
-const FormRow = styled.div`
-  display: flex;
-  margin: 32px 0;
-`;
-
-const InputData = styled.div`
-  width: 100%;
-  height: 40px;
-  margin: 0 20px;
-  position: relative;
-`;
-
-const Input = styled.input`
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 2px solid black;
-  border-radius: 10px;
-  font-size: 17px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-`;
-
-// const Label = styled.label`
-//   position: absolute;
-//   pointer-events: none;
-//   bottom: 10px;
-//   font-size: 16px;
-//   transition: all 0.3s ease;
-// `;
-
-const Textarea = styled.textarea`
-  height: 70px;
-  resize: none;
-  padding-top: 10px;
-  border: 2px solid black;
-  border-radius: 10px;
-`;
-
-const Underline = styled.div`
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-`;
-
-
-const SubmitBtn = styled.div`
-  width: 25% !important;
-  padding: 3rem;
-  transition: all 0.3s ease 0s;
-  
-`;
-
-
-
-const SubmitInput = styled.input`
-  background: none;
-  border: solid black;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  border: 2px solid red; /* Corrected border syntax */
-  border-radius: 10px;
-  transition: all 0.3s ease 0s;
-  background: linear-gradient(red, black); /* Corrected background syntax */
-  
-
-`;
+import { Button } from "./styls/Button";
 
 const Contact = () => {
+  const Wrapper = styled.section`
+    .c {
+      height: 150vh;
+      width: 100vw;
+      background: black;
+      padding-top: 6rem;
+    }
+   
+    .mapStarts {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40vh;
+      width: 90vw;
+      background: black;
+      padding: 0 3rem;
+      margin: 0 5rem;
+      border: 1px solid #7df957;
+      border-radius: 10px;
+    }
+    .startsBlock {
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+    }
+    .block-title {
+      font-size: 7rem;
+      font-family: revert;
+      font-weight: 501;
+      color: white;
+    }
+    .block-content {
+      font-size: 2rem;
+      font-family: "Lora", serif;
+      color: white;
+    }
+    .map{
+      padding-top: 7rem;
+    }
+
+    .map-header{
+      padding-top: 0rem;
+      float: right;
+      width: 40%;
+      margin-right: 3%;
+    }
+    .header-title{
+      font-size: 6rem;
+      font-family: ui-serif;
+    }
+    .header-content{
+      font-size: 1.5rem;
+      color: white;
+      margin: 2rem 0;
+      line-height: 2.5rem;
+      font-family: "Lora", serif;
+    }
+    .btn {
+    
+      margin-top: 4rem;
+      width: 200px;
+      height: 50px;
+      padding: 0 0;
+      background-color: black;
+      border: 1px solid #7df957;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.4rem;
+      &:hover {
+        color: black;
+        background-color:  #7df957;
+        font-weight: 600;
+      }
+  }
+  }
+  
+  };
+  .NavlinkText{
+    color: #7df957;
+  }
+  `;
+
   return (
     <Wrapper>
-          <Container>
-        <Text>Feel Free to Contact us</Text>
-        <Form action="#">
-        // ...
+      <div className="c">
+        <div className="mapStarts">
+          <div className="startsBlock">
+            <h3 class="block-title t-h-1">19+</h3>
+            <div class="block-content t-b-1">
+              Years of service <br /> excellence{" "}
+            </div>
+          </div>
+          <div className="startsBlock">
+            <h3 class="block-title t-h-1">100%</h3>
+            <div class="block-content t-b-1">
+              Years of service <br /> excellence
+            </div>
+          </div>
+          <div className="startsBlock">
+            <h3 class="block-title t-h-1">99%</h3>
+            <div class="block-content t-b-1">
+              Years of service <br /> excellence
+            </div>
+          </div>
+          <div className="startsBlock">
+            <h3 class="block-title t-h-1">2000+</h3>
+            <div class="block-content t-b-1">
+              Years of service <br /> excellence
+            </div>
+          </div>
+        </div>
+        <div className="map">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.28620995241!2d73.92422475000001!3d18.59334505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c14df5c70e0d%3A0x2d19689e09e2fced!2sPhoenix%20Mall%20Washrooms!5e0!3m2!1sen!2sin!4v1658905192255!5m2!1sen!2sin"
+        width="50%"
+        height="430"
+        style={{ border: '10px solid black', padding: '0 4rem', borderRadius: '100px' }}
 
-<FormRow>
-  <InputData>
-    <Input type="text" placeholder="First Name" required />
-    <Underline></Underline>
-  </InputData>
-  <InputData>
-    <Input type="text" placeholder="Last Name" required />
-    <Underline></Underline>
-  </InputData>
-</FormRow>
-<FormRow>
-  <InputData>
-    <Input type="text" placeholder="Email Address" required />
-    <Underline></Underline>
-  </InputData>
-  <InputData>
-    <Input type="text" placeholder="Website Name" required />
-    <Underline></Underline>
-  </InputData>
-</FormRow>
-<FormRow className="Lastrow" style={{ flexDirection: "column" }}>
-  <InputData className="textarea">
-    <Textarea rows="8" cols="80" placeholder="Write your message" required></Textarea>
-    <br />
-    <Underline></Underline>
-  </InputData>
-  <SubmitBtn>
-    <SubmitInput type="submit" value="Submit" />
-  </SubmitBtn>
-</FormRow>
-
-// ...
-
-        </Form>
-      </Container>
-      
-      {/* Second Column - Map */}
-    
+        allowFullScreen=""
+        referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-header">
+         <div class="map-header-interior is-animated" data-animate="stagger">
+            <h1 class="header-title content-gradient t-h-2">
+             Engineering Successful Outcomes
+            </h1>
+            <div class="header-content t-b-2">
+              Schedule a whiteboard session and learn the ThoughtFocus process
+              for creating new products and platforms, amplifying investments,
+              accelerating ROI, and achieving rapid economies of scale.
+            </div>
+            <Button className="btn ">
+          Schedule a call 
+          </Button>
+          </div>
+        </div>
+        </div>
+      </div>
+     
     </Wrapper>
   );
 };

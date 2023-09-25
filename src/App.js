@@ -1,10 +1,14 @@
+import React from 'react';
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
 import Services from "./Services";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./componants/Header";
 import Footer from "./componants/Footer";
+import Submenu1 from "./componants/Submenu1";
+import Submenu2 from "./componants/Submenu2";
+import Submenu3 from "./componants/Submenu3";
+import Submenu4 from "./componants/Submenu4";
  import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import Error from "./Error";
@@ -37,12 +41,15 @@ const App = () => {
     <ThemeProvider theme={theme}>
     <GlobalStyle />
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Submenu1" element={<Submenu1/>} />
+          <Route path="/Submenu2" element={<Submenu2/>} />
+          <Route path="/Submenu3" element={<Submenu3/>} />
+          <Route path="/Submenu4" element={<Submenu4/>} />
           <Route path="*" element={<Error />} />
         </Routes>
 

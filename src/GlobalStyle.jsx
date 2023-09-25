@@ -38,17 +38,15 @@ body::-webkit-scrollbar-thumb {
 
 
 h1{
-  font-size: 6rem;
-  animation: move-bg 16s linear infinite;
-  --bg-size: 400%;
-  --color-one: #060706;
-  --color-two: #dae4e0;
-  
-  font-weight: 900;
   background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+  animation: move-bg 6s linear infinite;
+  --bg-size: 400%;
+  --color-one: #7df957;
+  --color-two: #3a7d65;
   color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 21;
 }
 
 @keyframes move-bg {

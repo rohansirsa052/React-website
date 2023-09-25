@@ -3,13 +3,15 @@ import styled from "styled-components";
 // import { NavLink } from "react-router-dom";
 import { Button } from "./styls/Button";
 import Sdata from "./Servicesdata"; // Update the path to your Sdata file
+// import Header from "./componants/Header";
 
 const Services = () => {
   console.log(Sdata);
 
   return (
+    <React.Fragment>
+    
     <Wrapper className="section">
-      <h2 className="common-heading">Our Services</h2>
       <div className="container grid grid-three-column">
         {Sdata.map((curElem) => {
           const { id, tittle,description, img_src, Link } = curElem;
@@ -21,7 +23,7 @@ const Services = () => {
               <div className="card-data">
                 <h3 style= {{textAlign: "center"}}>{tittle}</h3>
                 <p>{description}</p>
-                <a href={Link} target="_blank">
+                <a href={Link}>
                 <Button className="btn">Read More</Button>
         </a>      
               
@@ -31,6 +33,7 @@ const Services = () => {
         })}
       </div>
     </Wrapper>
+    </React.Fragment>
   );
 };
 
@@ -38,7 +41,7 @@ const Services = () => {
 
 
 const Wrapper = styled.section`
-  padding: 9rem 0;
+  padding-bottom: 0rem;
   background-color: ${({ theme }) => theme.colors.bg};
 
   .container {
@@ -59,16 +62,17 @@ const Wrapper = styled.section`
     .btn {
       margin: 2rem auto;
       background-color: rgb(0 0 0 / 0%);
-      border: 0.1rem solid rgb(98 84 243);
+      border: 0.1rem solid #7df957;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: rgb(98 84 243);
+      color: black;
       font-size: 1.4rem;
 
       &:hover {
-        background-color: rgb(98 84 243);
-        color: #fff;
+        background-color: #7df957;
+        color: black;
+        font-weight: bold;
       }
     }
   }

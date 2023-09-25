@@ -25,46 +25,147 @@ const Footer = () => {
       {/* footer section  */}
 
       <footer>
-        <div className="container grid grid-four-column">
+        <div className="container grid grid-two-column1">
           <div className="footer-about">
-            <h3>Fintech</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div className="logo1">
+          <img className="logoImage" src="https://finxsystems.com/wp-content/uploads/2023/04/logo-2.svg" alt="" /></div>
+          <h1 className="services-left-title">
+          Engineering Successful Outcomes
+            </h1>
+            <h2 className="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto similique corporis, perspiciatis accusantium ullam dolorem magnam quae dolor quasi beatae unde maiores odio iusto! Suscipit tempore sed ab quos velit.</h2>
           </div>
 
           {/* 2nd column */}
           <div className="footer-subscribe">
-            <h3>CONTACT US </h3>
-            <p> 15300 Croydon Drive. Surrey, BC V3Z 0Z5, CANADA</p>
-           
+
+          <div>
+          <h1 className="heading"> Home
+          </h1>
+          <ul>
+          <li className="list">
+        <NavLink className="navbar-link" to="/">Payments
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Banking and Capital Markets
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Lending
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Manufacturing and B2B
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Higher Education and Public
+        </NavLink>
+        
+        </li>
+       
+          </ul>
+          </div>
+
+
+
+        <div>
+          <h1 className="heading"> About
+          </h1>
+          <ul>
+          <li className="list">
+        <NavLink className="navbar-link" to="/">Payments
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Banking and Capital Markets
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Lending
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Manufacturing and B2B
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Higher Education and Public
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Manufacturing and B2B
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Higher Education and Public
+        </NavLink>
+        </li>
+          </ul>
+          </div>
+
+          <div>
+          <h1 className="heading"> Services
+          </h1>
+          <ul>
+          <li className="list">
+        <NavLink className="navbar-link" to="/">Payments
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Banking
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Lending
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Manufacturing
+        </NavLink>
+        </li>
+          </ul>
+          </div>
+
+          <div>
+          <h1 className="heading"> Contect
+          </h1>
+          <ul>
+          <li className="list">
+        <NavLink className="navbar-link" to="/">Payments
+        </NavLink>
+        </li>
+        <li className="list">
+        <NavLink className="navbar-link" to="/">Payments
+        </NavLink>
+        <Button className="btn" style={{"marginRight" : "5rem"}} >Get In Touch</Button>
+        </li>
+       
+          </ul>
+          <div className="footer-social--icons">
+          <div>
+            <FaDiscord className="icons" />
+          </div>
+          <div>
+            <FaInstagram className="icons" />
+          </div>
+          <div>
+            <a
+              href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+              target="_blank">
+              <FaYoutube className="icons" />
+            </a>
+          </div>
+        </div>
+          </div>
+
+            
           </div>
 
           {/* 3rs column  */}
-          <div className="footer-social">
-            <h3>Follows Us</h3>
-            <div className="footer-social--icons">
-              <div>
-                <FaDiscord className="icons" />
-              </div>
-              <div>
-                <FaInstagram className="icons" />
-              </div>
-              <div>
-                <a
-                rel="noreferrer"
-                  href="google.com"
-                  target="_blank">
-                  <FaYoutube className="icons" />
-                </a>
-              </div>
-            </div>
-          </div>
-
+         
           {/* 4th column  */}
-          <div className="footer-contact">
-            <h3>Call Us</h3>
-            <h3>+91 12345678978</h3>
-            <input type="submit" value="Call now" />
-          </div>
+        
         </div>
 
         {/* bottom section  */}
@@ -90,7 +191,7 @@ const Wrapper = styled.section`
     max-width: 60vw;
     margin: auto;
     padding: 5rem 10rem;
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: rgb(227, 227, 227);;
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     transform: translateY(50%);
@@ -101,23 +202,23 @@ const Wrapper = styled.section`
   }
   .btn {
     margin: 2rem auto;
-    background-color: rgb(0 0 0 / 0%);
-    border: 0.1rem solid rgb(98 84 243);
+    background-color: black;
+    border: 0.1rem solid #7df957;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(98 84 243);
+    color: white;
     font-size: 1.4rem;
 
     &:hover {
-      background-color: rgb(98 84 243);
-      color: #fff;
+      filter: brightness(1.2);
+      color: #7df957;
     }
   }
 }
   footer {
     padding: 14rem 0 9rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    background-color: black;
 
     h3 {
       color: ${({ theme }) => theme.colors.hr};
@@ -129,6 +230,9 @@ const Wrapper = styled.section`
     .footer-social--icons {
       display: flex;
       gap: 2rem;
+    position: relative;
+    top: 58%;
+    right: 30%;
 
       div {
         padding: 1rem;
@@ -155,6 +259,72 @@ const Wrapper = styled.section`
     }
   }
 
+  .services-left-title{
+    font-size: 4.5rem;
+    font-family: ui-serif;
+}
+.para{        
+  text-align: left;
+  font-size: 2rem;
+  color: white;
+  margin: 0rem;
+  font-family: "Bree Serif", serif;
+}
+
+
+
+.footer-about{
+  margin-left: 4rem;
+}
+
+ .grid-two-column1{
+  grid-template-columns: 0.1fr 2.6fr;
+ }
+ .footer-subscribe{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 2rem;
+  gap: 2rem;
+  width: 110%;
+ }
+ .heading{
+   color: white;
+   text-decoration: underline;
+   font-size: 2rem;
+   font-weight: bold;
+ }
+.list{
+  padding: 1rem;
+  padding-left: 0rem;
+}
+
+ .navbar-link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    transition: color 0.3s linear;
+    
+  }
+
+  &:hover,
+  &:active {
+    color: #7df957;
+    filter: brightness(1.2);
+  
+  }
+} 
+.logo1{
+  margin-left: -5rem;
+  margin-top: -12rem;
+  margin-bottom: 8rem
+}
+.logoImage{
+   width: 15vw;
+}
   }
 `;
 

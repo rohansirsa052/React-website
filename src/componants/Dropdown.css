@@ -6,20 +6,21 @@
     text-align: start;
      */
      position: absolute;
-     top: 10rem;
+     margin-left: -8rem;
      display: flex;
      justify-content:flex-start;
      flex-wrap: wrap;
      width: 112vw;
      height: auto;
-     transform: translateX(-43%);
+     transform: translateX(-30%);
      margin-top: 1.5rem;
      overflow: hidden;
      text-align: start;
      background-color: black;
      z-index: 2;
-     padding-left: 50rem;
+     padding-left: 31vw;
      border-radius: 6px;
+     text-transform: none;
      
   }
   

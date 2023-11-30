@@ -11,29 +11,29 @@ const FrontPageServices = () => {
             Engineering Successful Outcomes
               </h1>
         
-            <div class="services-left-content t-b-2">
-              <p class="content">
+            <div className="services-left-content t-b-2">
+              <p className="content">
                 Helping you engineer capabilities that predictably and
                 consistently achieve targeted business outcomes is the entire
                 reason we exist.
               </p>
 
-              <ul class="list">
-                <li class="mb-1 lead">
+              <ul className="list">
+                <li className="mb-1 lead">
                   <b>Increase Revenue</b>
                 </li>
-                <li class="mb-1 lead">
+                <li className="mb-1 lead">
                   <b>Reduce Costs</b>
                 </li>
-                <li class="mb-1 lead">
+                <li className="mb-1 lead">
                   <b>Mitigate Risk</b>
                 </li>
-                <li class="mb-1 lead">
+                <li className="mb-1 lead">
                   <b>Accelerate Innovation</b>
                 </li>
               </ul>
 
-              <p class="content">
+              <p className="content">
                 Unlock transformational technologies, strategies, and solutions
                 that achieve your successful outcomes.
                
@@ -66,15 +66,19 @@ const FrontPageServices = () => {
 };
 const Wrapper = styled.section`
   .c {
-    margin: 3rem 3rem 15rem 4rem;
-
+    margin: 3rem 3rem 0rem 4rem;
+  
     .row {
-     margin-top: 3rem;
-      height: 100vh;
+      margin-top: 3rem;
       width: 100vw;
       display: grid;
       grid-template-columns: 1.5fr 0.5fr 1.8fr 0.2fr;
-
+      @media (max-width:  820px) {
+        display: grid;
+        grid-template-rows: 2fr;
+        grid-template-columns: unset;
+}
+      }
 
       .mb-3 {
         display: grid;
@@ -99,12 +103,13 @@ const Wrapper = styled.section`
         padding-bottom: 1rem;
       }
       .btn {
-    
+        margin-left: 0;
+        margin-bottom: 2rem;
         margin-top: 2rem;
-        width: 28%;
-        height: 10%;
+        width: 145px;
+        height: 50px;
         padding: 0 0;
-        background-color: black;
+        background-color: black !important;
         border: 0.1rem solid black;
         display: flex;
         justify-content: center;
@@ -112,15 +117,20 @@ const Wrapper = styled.section`
         color: white;
         font-size: 1.4rem;
         &:hover {
+          filter: brightness(1.2);
           color: #7df957;
-          font-weight: bold;
         }
     }
     .col-md-6{
         margin-top: 3rem;
         display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        @media (max-width:  768px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
 }   
     hr{
     width: 90%;

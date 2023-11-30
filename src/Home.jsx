@@ -23,7 +23,8 @@ const Home = () => {
       <HomeSectionWrapper>
         <HomeSection  {...Data}/>
       </HomeSectionWrapper>
-      <FrontPageIntro/>
+   
+      <FrontPageIntro/> 
       
       <Services />
       <FrontPageServices/>
@@ -36,17 +37,9 @@ const Home = () => {
 
 
 const HomeSectionWrapper = styled.section`
-  &::before {
-    content: "";
-    background: url("https://wallpapercave.com/dwp2x/wp2446267.jpg") no-repeat center center/cover;
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    opacity: 0.9;
-  }
+height: 550px;
+width: 100vw;
+background: url("https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/capabilities-bg/Digital-Applications-and-Ops.jpg") no-repeat center center/cover;
 `;
 
 export default Home;

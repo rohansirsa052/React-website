@@ -2,13 +2,13 @@ import React from 'react'
 import styled from "styled-components";
 import Part1 from './Submenus/Parts/Part1';
 import SubmenusTemplate from './Submenus/SubmenusTemplate';
-const Submenu3 = () => {
+const Submenu6 = () => {
 
   const Data= {
     topData: "",
-    mainHeading : "INTELLIGENT AUTOMATION",
+    mainHeading : "DEVOPS",
     Button: "Call Now",
-    background: "https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/capabilities-bg/Data-Analytics.jpg"
+    background: "https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/insights-bg/news-and-events-new.jpg"
   }
 
   const Data2= {
@@ -27,4 +27,4 @@ const Submenu3 = () => {
 const Submenu1SectionWrapper = styled.section`
 
 `;
-export default Submenu3
+export default Submenu6

@@ -29,19 +29,18 @@ useEffect(() => {
     <React.Fragment>
     <Header/>
     <Wrapper>   
-      <div className="container">
+      <div className="c">
         <div className="section-hero-data">
           <p className="hero-top-data">{props.topData}</p>
           <h1 className="hero-heading">Think <span className="spantext" ref={el} /> </h1>
-          <p className="hero-para">
+        { /* <p className="hero-para">
           {props.para}
-          </p>
+  </p> */}
          
         </div>
 
-        {/* for image  */}
-        <div className="section-hero-image">
-        </div>
+       
+       
       </div>
     </Wrapper>
     </React.Fragment>
@@ -49,17 +48,20 @@ useEffect(() => {
 };
 
 const Wrapper = styled.section`
-  padding: 12rem 0;
-
+    top: 30%;
+    position: sticky;
+    padding-bottom: 5rem;
+  .c{
+    display: flex;
+    margin-left: 5rem;
+  }
   .section-hero-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index= -1;
   }
-  .container{
-    position: relative;
-    top: 15rem;
-  }
+ 
 
  .spantext{
   color: white;
@@ -76,6 +78,9 @@ const Wrapper = styled.section`
   .hero-heading {
     text-transform: uppercase;
     font-size: 5.9rem;
+    @media (max-width:  768px) {
+      font-size: 3.9rem;
+    }
   }
   .header-is-scroll{
     background: white !important;

@@ -17,17 +17,10 @@ const About = () => {
   )
 }
 const AboutSectionWrapper = styled.section`
-  &::before {
-    content: "";
-    background: url("https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/about-us-banner.jpg") no-repeat center center/cover;
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100vh;
+
+    height: 550px;
     width: 100vw;
-    z-index: -1;
-    opacity: 2;
-  }
+    background: url("https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/about-us-banner.jpg") no-repeat center center/cover;
 `;
 
 export default About

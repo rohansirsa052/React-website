@@ -6,13 +6,15 @@ import Sdata from "./Servicesdata"; // Update the path to your Sdata file
 // import Header from "./componants/Header";
 
 const Services = () => {
-  console.log(Sdata);
+ 
 
   return (
     <React.Fragment>
     
     <Wrapper className="section">
+    <h2 style={{textAlign: "left", fontSize: "7rem", fontFamily: "uiSerif", margin: "4rem 0 1rem 3rem", fontWeight: "400", color: " #7df957"}}  >Our Services</h2>
       <div className="container grid grid-three-column">
+     
         {Sdata.map((curElem) => {
           const { id, tittle,description, img_src, Link } = curElem;
           return (
@@ -21,8 +23,8 @@ const Services = () => {
                 <img src={img_src} alt={tittle} />
               </figure>
               <div className="card-data">
-                <h3 style= {{textAlign: "center"}}>{tittle}</h3>
-                <p>{description}</p>
+                <h3 style= {{textAlign: "center", fontFamily: "uiSerif"}}>{tittle}</h3>
+                <p style= {{textAlign: "center", fontFamily: "uiSerif"}}>{description}</p>
                 <a href={Link}>
                 <Button className="btn">Read More</Button>
         </a>      
@@ -41,11 +43,12 @@ const Services = () => {
 
 
 const Wrapper = styled.section`
-  padding-bottom: 0rem;
-  background-color: ${({ theme }) => theme.colors.bg};
+  padding-bottom: 3rem;
+  background-color: rgb(227, 227, 227);
 
   .container {
-    max-width: 120rem;
+    max-width: 150rem;
+    padding: 0 2rem;
   }
 
   .card {

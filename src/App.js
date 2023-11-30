@@ -9,6 +9,8 @@ import Submenu1 from "./componants/Submenu1";
 import Submenu2 from "./componants/Submenu2";
 import Submenu3 from "./componants/Submenu3";
 import Submenu4 from "./componants/Submenu4";
+import Submenu5 from './componants/Submenu5';
+import Submenu6 from './componants/Submenu6';
  import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import Error from "./Error";
@@ -50,6 +52,10 @@ const App = () => {
           <Route path="/Submenu2" element={<Submenu2/>} />
           <Route path="/Submenu3" element={<Submenu3/>} />
           <Route path="/Submenu4" element={<Submenu4/>} />
+          <Route path="/Submenu5" element={<Submenu5/>} />
+          <Route path="/Submenu6" element={<Submenu6/>} />
+          
+          
           <Route path="*" element={<Error />} />
         </Routes>
 

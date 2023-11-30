@@ -1,30 +1,30 @@
 import React from 'react'
-import HomeSection from './HomeSection';
 import styled from "styled-components";
+import Part1 from './Submenus/Parts/Part1';
+import SubmenusTemplate from './Submenus/SubmenusTemplate';
 const Submenu1 = () => {
 
-    const Data= {
-        topData: "",
-        mainHeading : "ARTIFICIAL INTELLIGENCE",
-        Button: "Read more"
-      }
+  const Data= {
+    topData: "",
+    mainHeading : "ARTIFICIAL INTELLIGENCE",
+    Button: "Call Now",
+    background: "https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/capabilities-bg/Digital-Operations-and-Intelligent-Process-Automation.jpg"
+  }
+
+  const Data2= {
+    headingText: "Improve your digital operations with our",
+    spanText: "process reengineering services.",
+    para: " Our AI solutions leverage new-age technologies like artificial intelligence and machine learning to help banks and credit unions extend the capabilities of their existing systems and solve complex problems in a more efficient and cost-effective manner. Our solutions automate manual processes, reduce errors, and provide real-time insights into customer behavior and market trends",
+    para2: "We FinX combine deep domain expertise in fintech with advanced data engineering, data science, and statistical analysis techniques to help you solve complex business problems. Our coordinated approach to every AI/ML project enables us to optimize your processes"
+  }
   return (
-    <AboutSectionWrapper>
-    <HomeSection  {...Data}/>
-    </AboutSectionWrapper>
+    <Submenu1SectionWrapper>
+    <SubmenusTemplate {...Data} />
+    <Part1 {...Data2}/>
+    </Submenu1SectionWrapper>
   )
 }
-const AboutSectionWrapper = styled.section`
-  &::before {
-    content: "";
-    background: url("https://finxsystems.com/wp-content/uploads/2023/04/ai-chip-artificial-intelligence-future-technology-innovation-scaled.jpg") no-repeat center center/cover;
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    opacity: 2;
-  }
+const Submenu1SectionWrapper = styled.section`
+
 `;
 export default Submenu1

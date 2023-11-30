@@ -28,21 +28,21 @@ const Sdata= [
         img_src :"https://wallpapercave.com/wp/wp6680364.jpg" ,
         tittle: "Service 4",
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim et voluptas tempore alias nisi fuga doloremque rerum ab id ", 
-        Link : "Submenu4"
+        Link : "/Submenu4"
     },
     {
         id: 5,
         img_src :"https://wallpapercave.com/wp/wp6680247.gif" ,
         tittle: "Service 5",
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim et voluptas tempore alias nisi fuga doloremque rerum ab id ", 
-        Link : "Submenu4"
+        Link : "/Submenu5"
     },
     {
         id: 6,
         img_src :"https://wallpapercave.com/wp/wp6680495.jpg" ,
         tittle: "Service 6",
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim et voluptas tempore alias nisi fuga doloremque rerum ab id ", 
-        Link : "Submenu4"
+        Link : "/Submenu6"
     },
    
 ]

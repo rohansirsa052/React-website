@@ -3,67 +3,79 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import DropdownMenu from "./Dropdown";
 import { Button } from "../styls/Button";
+import "./Responsive.css";
+
+
 
 const Header = () => {
-  const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
+  const [isheaderscrolled, setisheaderscrolled] = useState(false);
+  const [showmediaicons, setshowmediaicons] = useState(false);
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    setClick(!click);
+  };
 
   const onMouseEnter = () => {
-    setIsHeaderScrolled(window.innerWidth >= 960);
+    setisheaderscrolled(window.innerWidth >= 960);
   };
 
   const onMouseLeave = () => {
-    if (window.scrollY > 0) {
-      setIsHeaderScrolled(true);
+    if (window.scrollY > 0 ) {
+      setisheaderscrolled(true);
     }else{
-    setIsHeaderScrolled(false);
+    setisheaderscrolled(false);
     }
   };
 
   const onMouseEnter1 = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
-      setIsHeaderScrolled(true); 
+      setisheaderscrolled(true); 
     } else {
       setDropdown(true);
-      setIsHeaderScrolled(true);
+      setisheaderscrolled(true);
     }
   };
-console.log(window.innerHeight);
+
   const onMouseLeave1 = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
-      setIsHeaderScrolled(true); 
+      setisheaderscrolled(true); 
     } else {
       setDropdown(false);
-        setIsHeaderScrolled(true);
+        setisheaderscrolled(true);
     }
   };
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
-      setIsHeaderScrolled(true);
+      setisheaderscrolled(true);
     } else {
-      setIsHeaderScrolled(false);
+      setisheaderscrolled(false);
     }
   };
 
   
 
   window.addEventListener("scroll", handleScroll);
-
+  
  
 
-  return (
+  return ( 
     <React.Fragment>
-      <MainHeader isHeaderScrolled={isHeaderScrolled} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <MainHeader className={
+        showmediaicons ? "mobile-menu-link" : "main-nav"
+      }  isheaderscrolled={isheaderscrolled}  onMouseEnter={onMouseEnter}  showmediaicons={showmediaicons}  onMouseLeave={onMouseLeave}>
+        
+          {/* 1st logo part  */}
       <div className="logo">
         <img className="logoImage" src="https://finxsystems.com/wp-content/uploads/2023/04/logo-2.svg" alt="" /></div>
-
-        <Nav isHeaderScrolled={isHeaderScrolled}>
-          <div className="menuIcon">
+        {/* 2nd menu part  */}
+        <Nav isheaderscrolled={isheaderscrolled}>
+          <div  className={
+            showmediaicons ? "mobile-menu-link1" : "menu-link"
+          }>
             <ul className="navbar-list">
               <li>
                 <NavLink className="navbar-link" to="/">
@@ -98,14 +110,17 @@ console.log(window.innerHeight);
             </ul>
           </div>
         </Nav>
-
+        {/* 3rd call button */}
+      
         <Button className="btn">
           <NavLink className="NavlinkText" to="/contact">Schedule a call</NavLink>
         </Button>
-        {/* <div className='menu-icon' onClick={handleClick}>
-        //   <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
-  </div> */}
-        
+        <div className='menu-icon' onClick={() => {
+          handleClick();
+          setshowmediaicons(!showmediaicons);
+      }}>
+          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+      </div>      
       </MainHeader>
     </React.Fragment>
   );
@@ -114,16 +129,23 @@ console.log(window.innerHeight);
 const MainHeader = styled.header`
   position: fixed;
   top:0;
-  right: 0;
-  left:0;
+  right: 0rem;
+  left:0rem;
   padding: 0 1rem;
-  height: 10rem;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  height: 8rem;
+  grid-template-columns:  0.4fr 2.3fr 1.1fr 0.2fr;
   color: white;
   align-items: center;
   z-index: 32;
-  background-color: ${props => props.isHeaderScrolled ? 'white' : 'initial'};
+  background-color: ${props => (props.isheaderscrolled ) ? 'white' : 'initial'};
+  @media (max-width:  918px) {
+    background-color: ${props => (props.showmediaicons ) ? 'white' : 'initial'};
+    position:  ${props => (props.showmediaicons ) ? 'fixed' : 'static'};
+  }
+  
+ 
+ 
 
   .logo {
     height: auto;
@@ -139,9 +161,11 @@ const MainHeader = styled.header`
   .navbar-link {
     &:link,
     &:visited {
-      color: ${props => (props.isHeaderScrolled ? "black" : "white")};
+      color: ${props => (props.isheaderscrolled ? "black" : "white")};
+     
     }
   }
+ 
   .btn {
     position: absolute;
     right: 2rem;
@@ -152,7 +176,7 @@ const MainHeader = styled.header`
     align-items: center;
     color: #7df957 !important;
     font-size: 1.4rem;
-    
+    margin-top: 0.7rem;
     &:hover {
       background-color: black;
       color: #fff;
@@ -166,6 +190,60 @@ const MainHeader = styled.header`
       color:  #7df957;
     }
   }
+  
+  .menu-icon{
+    visibility: hidden;
+  }
+  .logoImage{
+    width: 15vw;
+ }
+  @media (max-width:  918px) {
+  
+    .menu-icon{
+      visibility: visible;
+      float: right;
+      width: fit-content;
+      text-align: right;
+      grid-column: 4/5;
+      display: visible;
+      color: ${props => (props.isheaderscrolled || props.showmediaicons) ? 'black' : 'white'};
+     
+    }
+    .btn{
+      display: none;
+    }
+    .menu-link{
+      display: none;
+    }
+    .logoImage{
+      width: 43vw;
+   }
+    .mobile-menu-link{
+      background-color: white !important;
+      display: inline-block;
+      height: 100%;
+    }
+      .mobile-menu-link1 ul {
+        flex-direction: column;
+        height: max-content;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 57px;
+        border: 5px solid white;
+        text-align: left;
+        transition: all 0.5s;
+        transform-origin: top;
+        box-shadow: 0px 31px 31px 4px rgb(12 11 11 / 34%);
+        padding: 20px;
+        border-radius: 12px
+        }
+        
+      }
+ 
+  }
+
 `;
 const Nav = styled.nav`
   .navbar-list {
@@ -181,9 +259,9 @@ const Nav = styled.nav`
           text-decoration: none;
           font-size: 1.8rem;
           text-transform: uppercase;
-          color: ${props => (props.isHeaderScrolled ? "black" : "white")};
+          color: ${props => (props.isheaderscrolled ? "black" : "white")};
           transition: color 0.3s linear;
-          padding: 8rem 0;
+          padding: 3rem 0;
         }
 
         &:hover,
@@ -192,6 +270,15 @@ const Nav = styled.nav`
           filter: brightness(1.2);
         }
       } 
+    }
+    @media (max-width:  918px) {
+
+      .navbar-link {
+        &:link,
+        &:visited {
+         
+          color:black !important;
+        }
     }
   }
 `;

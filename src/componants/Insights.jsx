@@ -11,35 +11,30 @@ const Insights = () => {
 
     <div className='grid1'>
    
-    <div className="row">
+   
 
-    <div className="card"> <h2>News and events</h2>
+    <div className="card" style={{  background: "url(https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/home-page/home-insights-success-stories.webp)"}} > <h2>News and events</h2>
     <div className="heading">
     <h1>ThoughtFocus joins the Professional Background Screening</h1>
     </div>
     <Button className="btn">Read More</Button>
 
     </div>
-    <div className="card3"> <h2  style={{"color": "black", "fontSize": "2rem"}}>BLOG</h2>
+    <div className="card"  style={{  backgroundColor: "white"}}> <h2  style={{"color": "black", "fontSize": "2rem"}}>BLOG</h2>
     <div className="heading">
     <h1  style={{"color": "black"}}>8 Keys to Preventing Sabotage of your Ability for IT Innovation</h1>
     </div>
-    <Button className="btn2">READ THE BLOG</Button>
+    <Button className="btn" style={{color: "black"}}>READ THE BLOG</Button>
 
     </div>
-
-    </div>
-    
-
-    <div className="row">
    
-    <div className="card3"> <h2  style={{"color": "black", "fontSize": "2rem"}}>PODCASTS</h2>
+    <div className="card" style={{  backgroundColor: "white"}}> <h2  style={{"color": "black", "fontSize": "2rem"}}>PODCASTS</h2>
     <div className="heading">
-    <h1  style={{"color": "black"}}>Conversations with Thought Leaders</h1>
+    <h1  style={{"color": "black", }}>Conversations with Thought Leaders Some extra text may be wruitten</h1>
     </div>
-    <Button className="btn2">LISTEN TO PODCAST</Button>
+    <Button className="btn"  style={{color: "black"}}>LISTEN TO PODCAST</Button>
     </div>
-    <div className="card4"> <h2>SUCCESS STORIES</h2>
+    <div className="card" style={{  background: "url(https://wallpapercave.com/dwp2x/wp5234042.jpg)"}}> <h2>SUCCESS STORIES</h2>
     <div className="heading">
     <h1>Driving massive cost savings for a global investment management firm </h1>
     </div>
@@ -47,12 +42,6 @@ const Insights = () => {
     </div>
 
     </div>
-   
-
-    </div>
-    
-    
-    
     </div>
    
 
@@ -68,27 +57,27 @@ const Insights = () => {
 }
 const Wrapper = styled.section`
         .c{
-          margin-top: 8rem;
-            height: 130vh;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
             width: 100vw;
             background-color: rgb(227, 227, 227);
+            padding-bottom: 3rem;
         }
         
         .grid1{
-          height: 100%;
-          width: 100%;
-         
-          margin-bottom: 2rem;
-          margin-left: 3rem;
-          margin-right: 6rem;
+          gap: 3rem;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          @media (max-width:  750px) {
+            grid-template: none;
+            grid-template-rows: repeat(2, 1fr);
+          }
         }
         h1{
             display: inline;
             color: white;
            
-            font-size: 3.5rem;
+            font-size: 3rem;
            
             font-weight: 400;
           
@@ -109,7 +98,8 @@ const Wrapper = styled.section`
             margin-left: 3rem;
             font-size: 4.5rem;
             padding-left: 3rem;
-            padding-top: 4rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             font-family: "Bree Serif", serif;
             font-weight: bold;
           }
@@ -120,33 +110,13 @@ const Wrapper = styled.section`
              grid-template-rows: repeat(2,1fr);
           }
           .card{
-            margin-top: 2rem;
-            margin-bottom: -2rem;
             margin-left: 3rem;
             margin-right: 2rem;
-            height: 45vh;
-            width: 43vw;
-
-            background:url("https://wallpapercave.com/dwp2x/wp5234042.jpg");
+            padding-bottom: 2rem;
+          
+        }
           }
-          .card4{
-            margin-top: 2rem;
-            margin-bottom: -2rem;
-            margin-left: 3rem;
-            margin-right: 2rem;
-            height: 45vh;
-            width: 43vw;
-            background-image:url("https://wallpapercave.com/dwp2x/wp12520106.jpg") ;
-          }
-          .card3{
-            margin-top: 2rem;
-            margin-bottom: -2rem;
-            margin-left: 3rem;
-            margin-right: 2rem;
-            height: 45vh;
-            width: 43vw;
-            background-color: white;
-          }
+          
           .btn {
             margin-left: 2rem;
             margin-top: 2rem;
@@ -167,6 +137,7 @@ const Wrapper = styled.section`
           }
 
           .btn2{
+              margin-top: 5rem;
               margin-left: 2rem;
               background-color: black;
               border: 0.1rem solid black;

@@ -1,30 +1,30 @@
 import React from 'react'
-import HomeSection from './HomeSection';
 import styled from "styled-components";
-const Submenu1 = () => {
+import Part1 from './Submenus/Parts/Part1';
+import SubmenusTemplate from './Submenus/SubmenusTemplate';
+const Submenu2 = () => {
 
-    const Data= {
-        topData: "",
-        mainHeading : "APPLICATION ENGINEERING",
-        Button: "Read more"
-      }
+  const Data= {
+    topData: "",
+    mainHeading : "APPLICATION ENGINEERING",
+    Button: "Call Now",
+    background: "https://thoughtfocus.com/wp-content/themes/thoughtfocus/assets-img/capabilities-bg/Customer-Experience-and-Digital-Product-Design.jpg"
+  }
+
+  const Data2= {
+    headingText: "IF YOU CAN DREAM IT,",
+    spanText: "WE CAN BUILD IT.",
+    para: " In today’s world of disruption, your applications must be able to adapt, while satisfying growing demand for stand-out customer experiences. ThoughtFocus works with your business to optimize and future-proof your systems. Our engineers approach complex challenges with creativity and a keen eye for value, applying decades of industry experience in legacy and cutting-edge technologies",
+    para2: "We FinX combine deep domain expertise in fintech with advanced data engineering, data science, and statistical analysis techniques to help you solve complex business problems. Our coordinated approach to every AI/ML project enables us to optimize your processes"
+  }
   return (
-    <AboutSectionWrapper>
-    <HomeSection  {...Data}/>
-    </AboutSectionWrapper>
+    <Submenu1SectionWrapper>
+    <SubmenusTemplate {...Data} />
+    <Part1 {...Data2}/>
+    </Submenu1SectionWrapper>
   )
 }
-const AboutSectionWrapper = styled.section`
-  &::before {
-    content: "";
-    background: url("https://finxsystems.com/wp-content/uploads/2023/04/cropped-Intelligent-Automation-scaled-1.jpg") no-repeat center center/cover;
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    opacity: 2;
-  }
+const Submenu1SectionWrapper = styled.section`
+
 `;
-export default Submenu1
+export default Submenu2

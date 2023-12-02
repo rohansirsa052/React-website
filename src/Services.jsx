@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { NavLink } from "react-router-dom";
+ import { NavLink } from "react-router-dom";
 import { Button } from "./styls/Button";
 import Sdata from "./Servicesdata"; // Update the path to your Sdata file
 // import Header from "./componants/Header";
@@ -25,10 +25,9 @@ const Services = () => {
               <div className="card-data">
                 <h3 style= {{textAlign: "center", fontFamily: "uiSerif"}}>{tittle}</h3>
                 <p style= {{textAlign: "center", fontFamily: "uiSerif"}}>{description}</p>
-                <a href={Link}>
-                <Button className="btn">Read More</Button>
-        </a>      
-              
+              <NavLink className="navbar-link" to={Link}>
+              <Button className="btn">Read More</Button>
+               </NavLink>
               </div>
             </div>
           );

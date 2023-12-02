@@ -21,6 +21,10 @@ const Contact = () => {
       padding: 0 3rem;
       margin: 0 5rem;
       border: 1px solid #7df957;
+      animation-duration: 0.5s;
+      animation-name:animate-pop;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
       border-radius: 10px;
       @media (max-width:  900px) {
         flex-direction: column;
@@ -35,6 +39,10 @@ const Contact = () => {
       display: flex;
       padding: 2rem;
       flex-direction: column;
+      animation-duration: 0.5s;
+  animation-name: animate-pop;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
     }
     .block-title {
       font-size: 7rem;

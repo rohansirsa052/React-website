@@ -38,19 +38,19 @@ const ServiceDropdown = [
     {
       id: 7,
       title: "Submenu 4",
-      path: "/Submenu6",
+      path: "/na",
       cName: "submenu-item",
     },
     {
       id: 8,
       title: "Submenu 4",
-      path: "/Submenu6",
+      path: "/na",
       cName: "submenu-item",
     },
     {
       id: 9,
       title: "Submenu 4",
-      path: "/Submenu6",
+      path: "/na",
       cName: "submenu-item",
     },
   ];

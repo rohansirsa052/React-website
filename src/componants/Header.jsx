@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import DropdownMenu from "./Dropdown";
 import { Button } from "../styls/Button";
-import "./Responsive.css";
+
 
 
 
@@ -94,7 +94,7 @@ const Header = () => {
             >
               <li>
              
-                <NavLink className="navbar-link" to="/service">
+                <NavLink className="navbar-link" to="">
                   Services
                   {dropdown && <DropdownMenu />}
                 </NavLink>

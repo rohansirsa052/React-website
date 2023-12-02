@@ -1,8 +1,9 @@
 import React from 'react';
 import About from "./About";
-import Contact from "./Contact";
+//import Contact from "./Contact";
+import Contactus from './Contactus';
 import Home from "./Home";
-import Services from "./Services";
+//import Services from "./Services";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./componants/Footer";
 import Submenu1 from "./componants/Submenu1";
@@ -46,15 +47,15 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
+          
+          <Route path="/contact" element={<Contactus />} />
           <Route path="/Submenu1" element={<Submenu1/>} />
           <Route path="/Submenu2" element={<Submenu2/>} />
           <Route path="/Submenu3" element={<Submenu3/>} />
           <Route path="/Submenu4" element={<Submenu4/>} />
           <Route path="/Submenu5" element={<Submenu5/>} />
           <Route path="/Submenu6" element={<Submenu6/>} />
-          
+          <Route path="*" element={<Error/>} />
           
           <Route path="*" element={<Error />} />
         </Routes>
